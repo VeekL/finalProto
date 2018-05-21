@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DataServiceService} from './../data-service.service';
+import {MatCardModule} from '@angular/material/card';
 
 
 @Component({

@@ -8,6 +8,12 @@ import { ObjectComponent } from './object/object.component';
 import { SceneComponent } from './scene/scene.component';
 import { EventComponent } from './event/event.component';
 import { ActionComponent } from './action/action.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule, MatButtonModule } from '@angular/material';
+
+
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { MatCard } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -17,10 +23,12 @@ import { ActionComponent } from './action/action.component';
     ObjectComponent,
     SceneComponent,
     EventComponent,
-    ActionComponent
-  ],
+    ActionComponent],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
