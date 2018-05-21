@@ -4,7 +4,6 @@ import { throwError } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-
 export class DataServiceService {
 
   vidId;
@@ -33,7 +32,7 @@ export class DataServiceService {
   }
 
 
-  getInnerPickerList() {
+  getInnerPickerList(vidID) {
     const listA = [{'id' : 1, 'type': 'Object', 'DateCreated': '24:05:2018', 'name': 'Stick', 'Reviewed': false, 'link': '/reviewing'},
     {'id' : 2, 'type': 'Object', 'DateCreated': '23:05:2018', 'name': 'Brick', 'Reviewed': false, 'link': '/reviewing'},
     {'id' : 3, 'type': 'Scene', 'DateCreated': '20:05:2018', 'name': 'House', 'Reviewed': false, 'link': '/reviewing'},

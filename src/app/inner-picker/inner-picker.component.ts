@@ -8,13 +8,13 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./inner-picker.component.css']
 })
 export class InnerPickerComponent implements OnInit {
+  order: string;
+
   public generalList = [];
 
-  constructor(private _genService: DataServiceService) { }
+  constructor() { }
 
-  ngOnInit() {
-    this.generalList = this._genService.getInnerPickerList();
-  }
+  ngOnInit() {}
 
 
 
