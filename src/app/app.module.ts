@@ -10,6 +10,7 @@ import { EventComponent } from './event/event.component';
 import { ActionComponent } from './action/action.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule, MatButtonModule } from '@angular/material';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -24,7 +25,8 @@ import { MatCardModule, MatButtonModule } from '@angular/material';
     SceneComponent,
     EventComponent,
     ActionComponent,
-  routingComponent],
+  routingComponent,
+  NotFoundComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
