@@ -9,7 +9,7 @@ export class MainPickerVidComponent implements OnInit {
 
   public vidList = [];
 
-  constructor(private _vidListService: DataServiceService, private router: Router) { }
+  constructor(private _vidListService: DataServiceService) { }
 
   ngOnInit() {
     this.vidList = this._vidListService.getVidList();
