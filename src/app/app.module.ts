@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { AppRoutingModule, routingComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainPickerVidComponent } from './main-picker-vid/main-picker-vid.component';
 import { InnerPickerComponent } from './inner-picker/inner-picker.component';
@@ -23,12 +23,14 @@ import { MatCardModule, MatButtonModule } from '@angular/material';
     ObjectComponent,
     SceneComponent,
     EventComponent,
-    ActionComponent],
+    ActionComponent,
+  routingComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
