@@ -1,3 +1,15 @@
-<p>
-  main-picker-vid works!
-</p>
+<h1>Video Selection</h1>
+
+<div *ngFor="let vid of vidList; index as i"  >
+      <div class="horizontal-card" >
+        <img src={{vid.image}} />
+        <div class="horizontal-card-body">
+          <span class="card-text">{{vid.rev}}</span>
+          <h4 class="card-title">Video {{i+1}}</h4>
+          <span class="card-text">{{vid.name}}</span>
+        </div>
+        <div class="horizontal-card-footer">
+          <a class="card-text status">Date Created:  {{vid.DateCreated}}</a>
+          <a class="card-text status">{{vid.Reviewed ? 'Reviewed' : 'Not Reviewed'}}</a>
+        </div>
+      </div>

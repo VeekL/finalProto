@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPickerVidComponent implements OnInit {
 
-  constructor() { }
+  public vidList = [];
+
+  constructor(private _vidListService: DataServiceService, private router: Router) { }
 
   ngOnInit() {
+    this.vidList = this._vidListService.getVidList();
   }
 
 }
