@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {DataServiceService} from './../data-service.service';
 import { ActivatedRoute } from '@angular/router';
+import {DataServiceService} from './../data-service.service';
 
 @Component({
   selector: 'app-inner-picker',
@@ -8,18 +8,23 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./inner-picker.component.css']
 })
 export class InnerPickerComponent implements OnInit {
+  VidID = -1;
   public generalList = [];
 
-  constructor(private _genService: DataServiceService) { }
+  constructor(private route: ActivatedRoute, private DataFetcher: DataServiceService) { }
 
   ngOnInit() {
-    this.generalList = this._genService.getInnerPickerList();
+    this.route.paramMap
+    .subscribe(params => {
+      let id = +params.get('vidID');
+      this.initializeGenList(id);
+    })
+
   }
 
-
-
-
-
-
+  initializeGenList(id){
+    VidID = id;
+    this.generalList = this.DataFetcher.getInnerPickerList(id);
+  }
 
 }

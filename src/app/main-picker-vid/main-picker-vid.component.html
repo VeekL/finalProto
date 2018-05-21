@@ -1,15 +1,21 @@
-<h1>Video Selection</h1>
-
-<div *ngFor="let vid of vidList; index as i"  >
-      <div class="horizontal-card" >
-        <img src={{vid.image}} />
-        <div class="horizontal-card-body">
-          <span class="card-text">{{vid.rev}}</span>
-          <h4 class="card-title">Video {{i+1}}</h4>
-          <span class="card-text">{{vid.name}}</span>
-        </div>
-        <div class="horizontal-card-footer">
-          <a class="card-text status">Date Created:  {{vid.DateCreated}}</a>
-          <a class="card-text status">{{vid.Reviewed ? 'Reviewed' : 'Not Reviewed'}}</a>
-        </div>
-      </div>
+<h1> Video Selection </h1>
+<div *ngFor="let vid of vidList; index as i">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <!-- <img mat-card-avatar src="https://source.unsplash.com/random/200x200"> -->
+      <mat-card-title>{{vid.name}}</mat-card-title>
+      <mat-card-subtitle>{{vid.Reviewed ? 'Reviewed' : 'Not Reviewed'}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src={{vid.image}}>
+    <mat-card-content>
+      <p>Date Created:  {{vid.DateCreated}}</p>
+    </mat-card-content>
+    <mat-card-content>
+      <mat-card-actions>
+        <!-- <button mat-button>Details</button> -->
+        <a [routerLink]="['/inner-picker', vid.id]">Go</a>
+        <!-- <button mat-button>Select</button> -->
+      </mat-card-actions>
+    </mat-card-content>
+  </mat-card>
+</div>

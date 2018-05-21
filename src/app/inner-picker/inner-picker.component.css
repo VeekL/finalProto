@@ -1,32 +1,4 @@
-.horizontal-card {
-  position: relative;
-  display: flex;
-  border: 1px solid gray;
-  margin-bottom: 2rem;
-}
-.horizontal-card img {
-  width: 256px;
-  height: 144px;
-  border-bottom: 30px peachpuff;
-}
-.horizontal-card .horizontal-card-body {
-  display: flex;
-  flex-direction: column;
-  margin-left: 1rem;
-}
-.horizontal-card .horizontal-card-footer {
-  position: absolute;
-  left: 258px;
-  right: 0px;
-  bottom: 0px;
-  height: 30px;
-  display: flex;
-  align-items: right;
-}
-.horizontal-card .horizontal-card-footer span {
-  width: 200px;
-  display: inline-block;
-}
-.horizontal-card .horizontal-card-footer a {
-  margin-left: 10px;
+.example-card {
+  max-width: 400px;
+  margin: 20px;
 }
