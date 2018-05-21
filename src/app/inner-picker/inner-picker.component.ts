@@ -23,7 +23,7 @@ export class InnerPickerComponent implements OnInit {
   }
 
   initializeGenList(id){
-    VidID = id;
+    this.VidID = id;
     this.generalList = this.DataFetcher.getInnerPickerList(id);
   }
 
